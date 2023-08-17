@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0013-regexp</title>
+  </head>
+  <body>
+    <script>
+      // TODO: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions
+
+      {
+        // Create regExp
+        const regexp1 = /[hello]/;
+        const regexp2 = new RegExp("[hello]");
+        const regexp3 = new RegExp(/[hello]/);
+      }
+
+      {
+        // Test regExp
+        const name = "Hello World";
+        const regexpName = /Hello/;
+
+        const result = regexpName.exec(name);
+        console.log(result);
+
+        const test = regexpName.test(name);
+        console.log(test);
+      }
+
+      {
+        // Test regExp
+        const name = "Hello World \n This IS Javascript";
+        const regexpName1 = /HELLO/i;
+        const regexpName2 = /is/gi;
+
+        // let result;
+        // while ((result = regexpName1.exec(name)) !== null) {
+        //   console.log(result);
+        // }
+
+        // while ((result = regexpName2.exec(name)) !== null) {
+        //   console.log(result);
+        // }
+      }
+    </script>
+  </body>
+</html>
