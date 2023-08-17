@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0004-object</title>
+  </head>
+  <body>
+    <script>
+      {
+        // Object.freeze()
+        const person = {
+          name: "alex",
+          age: 20,
+        };
+
+        Object.freeze(person);
+
+        person.name = "brandon";
+        delete person.age;
+        console.log(person);
+      }
+
+      {
+        // Object.seal()
+        const person = {
+          name: "alex",
+          age: 20,
+        };
+
+        Object.seal(person);
+
+        person.name = "brandon";
+        delete person.age;
+        console.log(person);
+      }
+
+      {
+        // Object.assign()
+        const person = {
+          name: "alex",
+          age: 20,
+        };
+
+        const personSource = {
+          name: "chris",
+          city: "New York",
+        };
+
+        Object.assign(person, personSource);
+
+        console.log(person);
+      }
+
+      {
+        // Object.values()
+        // Object.getPropertyNames()
+        const person = {
+          name: "alex",
+          age: 20,
+        };
+
+        console.log(Object.values(person));
+        console.log(Object.getOwnPropertyNames(person));
+      }
+    </script>
+  </body>
+</html>

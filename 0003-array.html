@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0003-array</title>
+  </head>
+  <body>
+    <script>
+      {
+        // Array
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+        console.log(fruits.length);
+        fruits.forEach((value, index) => console.log(`${index}: ${value}`));
+      }
+
+      {
+        // Queue
+        const queue = [];
+
+        queue.push(10);
+        queue.push(20);
+        queue.push(30);
+        queue.push(40);
+        console.log(queue);
+
+        queue.shift();
+        queue.shift();
+        console.log(queue);
+      }
+
+      {
+        // Array Stack
+        const arrayStack = [];
+
+        arrayStack.push("one");
+        arrayStack.push("two");
+        arrayStack.push("three");
+        arrayStack.push("four");
+        arrayStack.push("five");
+        console.log(arrayStack);
+
+        arrayStack.pop();
+        arrayStack.pop();
+        console.log(arrayStack);
+      }
+
+      {
+        // Array Search
+        const arraySearch = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 99];
+
+        console.log(arraySearch.find((value) => value > 4));
+        console.log(arraySearch.findIndex((value) => value > 3));
+        console.log(arraySearch.includes(0));
+        console.log(arraySearch.indexOf(10));
+        console.log(arraySearch.lastIndexOf(99));
+      }
+
+      {
+        // Array Filter
+        const arrayFilter = [1, 2, 3, 4, 5];
+
+        console.log(arrayFilter.filter((value) => value > 1));
+      }
+
+      {
+        // Array Transform
+        const arrayTransform = [1, 2, 3, 4, 5];
+
+        console.log(arrayTransform.map((value) => value * 5));
+        console.log(arrayTransform.reduce((result, value) => result + value));
+        console.log(
+          arrayTransform.reduceRight((result, value) => result * value)
+        );
+      }
+    </script>
+  </body>
+</html>
