@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0005-json</title>
+  </head>
+  <body>
+    <script>
+      // TODO: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON
+
+      const person = {
+        name: "alex",
+        age: 20,
+        address: {
+          country: "indonesia",
+          city: "jakarta",
+        },
+        hobbies: ["reading", "writing", "listening"],
+      };
+
+      const toString = JSON.stringify(person);
+      const toObject = JSON.parse(toString);
+
+      console.log(toString);
+      console.log(toObject);
+    </script>
+  </body>
+</html>

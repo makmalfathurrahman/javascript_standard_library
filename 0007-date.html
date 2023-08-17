@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0007-dateument</title>
+  </head>
+  <body>
+    <script>
+      // TODO: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
+
+      {
+        // Create Date
+        const date = new Date();
+        console.log(date);
+        console.log(date.getDate());
+        console.log(date.getMonth());
+        console.log(date.getFullYear());
+
+        const getDate = new Date("2000-01-01");
+        console.log(getDate.getFullYear());
+        console.log(getDate.getMonth());
+        console.log(getDate.getDate());
+
+        const getHours = new Date(2000, 1, 1, 12, 15, 45, 10);
+        console.log(getHours);
+      }
+
+      {
+        // Epoch & Unix Timestamp
+        const timestamp = Date.now();
+        console.log(timestamp);
+
+        const dateUnix = new Date(timestamp);
+        console.log(dateUnix);
+
+        console.log(dateUnix.getDate());
+      }
+
+      {
+        // Parsing date
+        const parseTimestamp = Date.parse("2000-01-01T12:15:30.100+07:00");
+        console.log(parseTimestamp);
+
+        const parseDate = new Date(parseTimestamp);
+        console.log(parseDate);
+      }
+
+      {
+        // Date Getter and Setter
+        const date = new Date();
+
+        console.log(date.getFullYear());
+        console.log(date.getMonth());
+        console.log(date.getDate());
+        console.log(date.getHours());
+        console.log(date.getMinutes());
+        console.log(date.getSeconds());
+        console.log(date.getMilliseconds());
+        console.log(date.getTimezoneOffset());
+      }
+    </script>
+  </body>
+</html>
