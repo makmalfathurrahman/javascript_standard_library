@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0016-encode</title>
+  </head>
+  <body>
+    <script>
+      // TODO: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI
+      // TODO: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/decodeURI
+      // TODO: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent
+      // TODO: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/decodeURIComponent
+
+      {
+        // encodeURI() and decodeURI()
+        const url = "https://www.example.com/name=Hello from url";
+
+        const encodedURL = encodeURI(url);
+        console.log("Encoded URL:", encodedURL);
+
+        const decodedURL = decodeURI(encodedURL);
+        console.log("Decoded URL:", decodedURL);
+      }
+
+      {
+        //
+        const value = "Hello&World=URI";
+        const url = "https://www.example.com/name=";
+
+        const encodedURL = encodeURIComponent(value);
+        console.log(url + encodedURL);
+
+        const decodedURL = decodeURIComponent(encodedURL);
+        console.log(url + decodedURL);
+      }
+    </script>
+  </body>
+</html>
